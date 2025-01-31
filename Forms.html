@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,21 +8,21 @@
   <body>
     <h1>Valorant Player Registration</h1>
     <form
-      action="/submit_form.php"
+      action="/action_page.php"
       oninput="rank_avg.value=(parseInt(rank1.value)+parseInt(rank2.value)+parseInt(rank3.value))/3"
     >
       <fieldset>
-        <legend>Player Information:</legend>
-        <label>In-Game Name</label><br />
-        <input type="text" id="ign" required /><br /><br />
+        <legend>Personal Information:</legend>
+        <label>Name</label><br />
+        <input type="text" id="name" /><br /><br />
 
         <label>Email ID</label><br />
-        <input type="email" id="email" required /><br /><br />
+        <input type="text" id="email" /><br /><br />
 
         <label>Riot ID & Tagline</label><br />
-        <input type="text" id="riot_id" required /><br /><br />
+        <input type="text" id="riot_id" /><br /><br />
 
-        <label>Preferred Role</label><br />
+        <label>Role</label><br />
         <input
           type="radio"
           id="duelist"
@@ -48,66 +48,50 @@
           value="Sentinel"
         />Sentinel<br /><br />
 
-        <label>Favorite Agents</label><br />
+        <label>Favorite Agents</label> <br />
         <input type="checkbox" id="agent1" value="Jett" />Jett<br />
         <input type="checkbox" id="agent2" value="Phoenix" />Phoenix<br />
         <input type="checkbox" id="agent3" value="Omen" />Omen<br />
         <input type="checkbox" id="agent4" value="Sage" />Sage<br />
         <input type="checkbox" id="agent5" value="Reyna" />Reyna<br /><br />
 
-        <label>Region</label>
+        <label>Birthday:</label>
+        <input type="date" id="birthday" name="birthday" /><br /><br /><br />
+
         <select name="region" id="region">
           <option value="NA">North America</option>
           <option value="EU">Europe</option>
           <option value="ASIA">Asia</option>
           <option value="SA">South America</option>
-          <option value="OCE">Oceania</option></select
-        ><br /><br />
-
-        <label>Ranks in Last Three Acts</label><br />
-        <select name="rank1" id="rank1">
-          <option value="1">Iron</option>
-          <option value="2">Bronze</option>
-          <option value="3">Silver</option>
-          <option value="4">Gold</option>
-          <option value="5">Platinum</option>
-          <option value="6">Diamond</option>
-          <option value="7">Ascendant</option>
-          <option value="8">Immortal</option>
-          <option value="9">Radiant</option>
+          <option value="OCE">Oceania</option>
         </select>
+
         <input type="number" id="rank1" name="rank1" /><br /><br />
 
         <select name="rank2" id="rank2">
-          <option value="1">Iron</option>
-          <option value="2">Bronze</option>
-          <option value="3">Silver</option>
-          <option value="4">Gold</option>
-          <option value="5">Platinum</option>
-          <option value="6">Diamond</option>
-          <option value="7">Ascendant</option>
-          <option value="8">Immortal</option>
-          <option value="9">Radiant</option>
+          <option value="NA">North America</option>
+          <option value="EU">Europe</option>
+          <option value="ASIA">Asia</option>
+          <option value="SA">South America</option>
+          <option value="OCE">Oceania</option>
         </select>
+
         <input type="number" id="rank2" name="rank2" /><br /><br />
 
         <select name="rank3" id="rank3">
-          <option value="1">Iron</option>
-          <option value="2">Bronze</option>
-          <option value="3">Silver</option>
-          <option value="4">Gold</option>
-          <option value="5">Platinum</option>
-          <option value="6">Diamond</option>
-          <option value="7">Ascendant</option>
-          <option value="8">Immortal</option>
-          <option value="9">Radiant</option>
+          <option value="NA">North America</option>
+          <option value="EU">Europe</option>
+          <option value="ASIA">Asia</option>
+          <option value="SA">South America</option>
+          <option value="OCE">Oceania</option>
         </select>
+
         <input type="number" id="rank3" name="rank3" /><br /><br />
 
         Average Rank Score:
         <output name="rank_avg" for="rank1 rank2 rank3"></output><br /><br />
 
-        <input type="submit" value="Register" />
+        <input type="submit" />
       </fieldset>
     </form>
   </body>
